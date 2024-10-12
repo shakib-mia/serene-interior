@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serene Interior</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- <div class="w-screen overflow-x-hidden relative"> -->
+    <!-- Navbar Container -->
+    <div
+      class="z-[999999999999999999999] w-screen transition fixed backdrop-blur"
+      id="navbar"
+    >
+      <!-- Navigation Bar -->
+      <nav class="relative w-screen">
+        <div class="container flex items-center justify-between py-4 lg:py-5">
+          <!-- Logo Section -->
+          <a href="#">
+            <h4
+              class="font-montserrat text-3xl lg:text-4xl font-semibold text-primary"
+            >
+              Serene Interior
+            </h4>
+          </a>
+
+          <!-- Hamburger Icon (Visible on Mobile) -->
+          <div class="flex items-center lg:hidden">
+            <span
+              id="menu-toggle"
+              class="text-4xl text-primary focus:outline-none"
+            >
+              <i class="fas fa-bars"></i>
+            </span>
+          </div>
+
+          <!-- Navbar Links -->
+          <ul
+            id="menu"
+            class="absolute left-0 top-[99%] max-h-0 w-screen divide-y divide-grey overflow-hidden bg-black text-xl font-medium text-primary shadow-lg transition-all duration-500 ease-linear lg:static lg:mt-0 lg:flex lg:max-h-full lg:w-auto lg:gap-6 lg:divide-y-0 lg:bg-transparent lg:py-0 lg:shadow-none"
+          >
+            <!-- Individual Navbar Links -->
+            <li>
+              <a
+                href="#"
+                class="container block py-4 transition hover:bg-grey hover:text-white lg:p-0 lg:hover:bg-transparent lg:hover:text-secondary"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="container block py-4 transition hover:bg-grey hover:text-white lg:p-0 lg:hover:bg-transparent lg:hover:text-secondary"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#jobs"
+                class="container block py-4 transition hover:bg-grey hover:text-white lg:p-0 lg:hover:bg-transparent lg:hover:text-secondary"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#employers"
+                class="container block py-4 transition hover:bg-grey hover:text-white lg:p-0 lg:hover:bg-transparent lg:hover:text-secondary"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blogs"
+                class="container block py-4 transition hover:bg-grey hover:text-white lg:p-0 lg:hover:bg-transparent lg:hover:text-secondary"
+                >Blog</a
+              >
+            </li>
+          </ul>
+
+          <!-- Register Button (Visible on larger screens) -->
+          <button
+            class="bg-white text-black hover:bg-transparent border-2 border-white hover:text-white hidden lg:inline-block"
+          >
+            Register Now
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      class="bg-[size:60%] bg-no-repeat"
+      style="background-image: url(./assets/hero-bg.svg)"
+    >
+      <!-- Hero Section -->
+      <header class="container pt-20 lg:pt-32 px-4 lg:px-0">
+        <!-- Heading with animated letters -->
+        <h1
+          class="text-5xl md:text-6xl lg:text-[6.5rem] font-bold flex justify-center lg:justify-between flex-wrap lg:flex-nowrap"
+        >
+          <!-- "Interiors" word -->
+          <div class="flex gap-px">
+            <span class="heading-letter relative">I</span>
+            <span class="heading-letter relative">n</span>
+            <span class="heading-letter relative">t</span>
+            <span class="heading-letter relative">e</span>
+            <span class="heading-letter relative">r</span>
+            <span class="heading-letter relative">i</span>
+            <span class="heading-letter relative">o</span>
+            <span class="heading-letter relative">r</span>
+            <span class="heading-letter relative">s</span>
+          </div>
+
+          <!-- Spacer -->
+          <span class="heading-letter relative">&nbsp;</span>
+
+          <!-- "for" word -->
+          <div class="flex gap-px">
+            <span class="heading-letter relative">f</span>
+            <span class="heading-letter relative">o</span>
+            <span class="heading-letter relative">r</span>
+          </div>
+
+          <!-- Spacer -->
+          <span class="heading-letter relative">&nbsp;</span>
+
+          <!-- "Modern Living" in grey -->
+          <div class="flex">
+            <div class="flex gap-px">
+              <span class="heading-letter relative text-grey">M</span>
+              <span class="heading-letter relative text-grey">o</span>
+              <span class="heading-letter relative text-grey">d</span>
+              <span class="heading-letter relative text-grey">e</span>
+              <span class="heading-letter relative text-grey">r</span>
+              <span class="heading-letter relative text-grey">n</span>
+            </div>
+            <span class="heading-letter relative text-grey">&nbsp;</span>
+            <div class="flex gap-px">
+              <span class="heading-letter relative text-grey">L</span>
+              <span class="heading-letter relative text-grey">i</span>
+              <span class="heading-letter relative text-grey">v</span>
+              <span class="heading-letter relative text-grey">i</span>
+              <span class="heading-letter relative text-grey">n</span>
+              <span class="heading-letter relative text-grey">g</span>
+            </div>
+          </div>
+        </h1>
+
+        <!-- Subheading and Counter Section -->
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center mt-6 lg:mt-10"
+        >
+          <!-- Descriptive paragraph -->
+          <p
+            class="text-lg sm:text-xl md:text-2xl w-full lg:w-9/12 capitalize text-grey fade-left mb-4 lg:mb-0"
+          >
+            We specialize in creating stunning, functional spaces that reflect
+            your unique style and vision. With a keen eye for detail and a
+            passion for modern aesthetics,
+          </p>
+
+          <!-- Counter section -->
+          <div
+            class="w-24 sm:w-32 md:w-40 aspect-square bg-[size:100%] animate-rotateReverse flex justify-center items-center fade-right"
+            style="background-image: url(./assets/counter.svg)"
+          >
+            <p
+              class="text-lg sm:text-xl md:text-2xl lg:text-3xl animate-rotate"
+            >
+              300+
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- categories section -->
+      <section class="container mt-7 mb-20">
+        <div
+          class="bg-grey p-4 lg:p-6 rounded-2xl lg:rounded-3x overflow-hidden"
+        >
+          <div class="flex flex-col lg:flex-row lg:gap-7 gap-4 lg:mb-7 mb-4">
+            <!-- Category -->
+            <div
+              class="rounded-2xl w-full lg:w-7/12 overflow-hidden relative group fade-left"
+            >
+              <div
+                class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <h3 class="text-base lg:text-3xl">
+                  Lorem ipsum dolor sit amet.
+                </h3>
+                <div
+                  class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
+                >
+                  <i class="fas fa-arrow-up rotate-45"></i>
+                </div>
+              </div>
+              <img
+                src="./assets/categories/category-1.jpg"
+                alt="category-1"
+                class="object-cover w-full h-full"
+              />
+            </div>
+
+            <!-- Category -->
+            <div
+              class="rounded-2xl w-full lg:w-5/12 overflow-hidden relative group fade-right"
+            >
+              <div
+                class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <h3 class="text-base lg:text-3xl">
+                  Lorem ipsum dolor sit amet.
+                </h3>
+                <div
+                  class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
+                >
+                  <i class="fas fa-arrow-up rotate-45"></i>
+                </div>
+              </div>
+              <img
+                src="./assets/categories/category-2.jpg"
+                alt="category-2"
+                class="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row gap-4 lg:gap-7 lg:h-96">
+            <!-- Category -->
+            <div
+              class="w-full lg:w-1/4 h-full relative group rounded-2xl overflow-hidden fade-left"
+            >
+              <div
+                class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <h3 class="text-base lg:text-3xl">Lorem ipsum.</h3>
+                <div
+                  class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
+                >
+                  <i class="fas fa-arrow-up rotate-45"></i>
+                </div>
+              </div>
+              <img
+                src="./assets/categories/category-3.jpg"
+                alt="category-3"
+                class="h-full object-cover w-full"
+              />
+            </div>
+
+            <!-- Category -->
+            <div
+              class="lg:w-1/2 h-full relative group rounded-2xl overflow-hidden fade-up"
+            >
+              <div
+                class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <h3 class="text-base lg:text-3xl">
+                  Lorem ipsum dolor sit amet.
+                </h3>
+                <div
+                  class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
+                >
+                  <i class="fas fa-arrow-up rotate-45"></i>
+                </div>
+              </div>
+              <img
+                src="./assets/categories/category-4.jpg"
+                alt="category-4"
+                class="h-full object-cover w-full"
+              />
+            </div>
+
+            <!-- Category -->
+            <div
+              class="lg:w-1/4 h-full relative group rounded-2xl overflow-hidden fade-right"
+            >
+              <div
+                class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <h3 class="text-base lg:text-3xl">Lorem ipsum.</h3>
+                <div
+                  class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
+                >
+                  <i class="fas fa-arrow-up rotate-45"></i>
+                </div>
+              </div>
+              <img
+                src="./assets/categories/category-5.jpg"
+                alt="category-4"
+                class="h-full object-cover w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Marquee Section (Scrolling text) -->
+    <div
+      class="relative py-4 border-white border-y overflow-x-hidden font-amaranth"
+    >
+      <div
+        id="marquee"
+        class="whitespace-nowrap relative w-[372vw] lg:w-screen flex gap-4"
+      >
+        <!-- First scroll row -->
+        <div class="flex lg:w-screen justify-around flex-shrink-0 gap-4">
+          <p class="lg:text-4xl">Residential Interior</p>
+          <img src="./assets/marquee-shape.svg" alt="marquee-shape" />
+          <p class="lg:text-4xl">Commercial Interior</p>
+          <img src="./assets/marquee-shape.svg" alt="marquee-shape" />
+          <p class="lg:text-4xl">Space Planning</p>
+          <img src="./assets/marquee-shape.svg" alt="marquee-shape" />
+          <p class="lg:text-4xl">Furniture & Décor</p>
+          <img src="./assets/marquee-shape.svg" alt="marquee-shape" />
+        </div>
+
+        <!-- Second scroll row -->
+        <div class="flex lg:w-screen justify-around flex-shrink-0 gap-4">
+          <p class="lg:text-4xl">Residential Interior</p>
+          <img src="./assets/marquee-shape.svg" alt="marquee-shape" />
+          <p class="lg:text-4xl">Commercial Interior</p>
+          <img src="./assets/marquee-shape.svg" alt="marquee-shape" />
+          <p class="lg:text-4xl">Space Planning</p>
+          <img src="./assets/marquee-shape.svg" alt="marquee-shape" />
+          <p class="lg:text-4xl">Furniture & Décor</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flower Scrolling-->
+    <div class="relative">
+      <div class="sticky top-0 left-0">
+        <video
+          id="scroll-video"
+          class="lg:h-screen w-screen sticky top-0 left-0 object-cover lg:object-contain"
+          src="./assets/videos/flowerkey3.mp4"
+        ></video>
+
+        <!-- Text aligned inside the video -->
+        <div
+          class="hidden lg:block absolute z-[99999999999] bottom-40 left-0 p-8 w-full h-full text-white"
+        >
+          <div class="relative h-full flex items-end container">
+            <h2
+              class="text-4xl md:text-6xl lg:text-8xl bg-black bg-opacity-50 p-4 w-full md:w-3/4 lg:w-1/2 relative font-bold"
+              id="video-text"
+            >
+              Lorem ipsum dolor sit
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-0 lg:h-screen"></div>
+    </div>
+
+    <!-- About Section -->
+    <div
+      style="background-image: url(./assets/about-bg.svg)"
+      class="bg-left-top bg-no-repeat"
+    >
+      <section
+        class="pt-0 py-14 lg:py-20 container grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+      >
+        <!-- Left Side -->
+        <aside>
+          <!-- About Heading -->
+          <h2
+            class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans relative"
+          >
+            <span class="heading-letter">A</span
+            ><span class="heading-letter">b</span
+            ><span class="heading-letter">o</span
+            ><span class="heading-letter">u</span
+            ><span class="heading-letter">t</span>
+            <span class="heading-letter">U</span
+            ><span class="heading-letter">s</span>
+          </h2>
+
+          <!-- About Subheading -->
+          <h3
+            class="text-xl md:text-2xl lg:text-5xl font-bold lg:mt-4 font-instrument-sans mt-4"
+          >
+            <span class="heading-letter">C</span
+            ><span class="heading-letter">r</span
+            ><span class="heading-letter">a</span
+            ><span class="heading-letter">f</span
+            ><span class="heading-letter">t</span
+            ><span class="heading-letter">i</span
+            ><span class="heading-letter">n</span
+            ><span class="heading-letter">g</span
+            ><span class="heading-letter"> </span
+            ><!-- Space -->
+            <span class="heading-letter">T</span
+            ><span class="heading-letter">i</span
+            ><span class="heading-letter">m</span
+            ><span class="heading-letter">e</span
+            ><span class="heading-letter">l</span
+            ><span class="heading-letter">e</span
+            ><span class="heading-letter">s</span
+            ><span class="heading-letter">s</span
+            ><span class="heading-letter"> </span
+            ><!-- Space -->
+            <span class="heading-letter">I</span
+            ><span class="heading-letter">n</span
+            ><span class="heading-letter">t</span
+            ><span class="heading-letter">e</span
+            ><span class="heading-letter">r</span
+            ><span class="heading-letter">i</span
+            ><span class="heading-letter">o</span
+            ><span class="heading-letter">r</span
+            ><span class="heading-letter">s</span>
+          </h3>
+
+          <!-- About Text -->
+          <p
+            class="mt-2 lg:mt-6 text-sm lg:text-lg text-grey font-instrument-sans capitalize fade-left"
+          >
+            We are a passionate team of designers dedicated to transforming
+            spaces into personalized havens of beauty and functionality. With
+            years of experience in both residential and commercial design, we
+            pride ourselves on creating environments that reflect your style,
+            needs, and aspirations. Our approach combines modern aesthetics with
+            a commitment to sustainable practices, ensuring each project is not
+            only visually stunning but also environmentally conscious.
+          </p>
+
+          <!-- List -->
+          <div class="flex flex-col gap-5 my-4 lg:my-8 lg:w-11/12">
+            <!-- List item -->
+            <div
+              class="p-4 lg:p-6 border border-white rounded-2xl bg-transparent fade-left backdrop-blur"
+            >
+              <div
+                class="flex gap-2 lg:gap-4 uppercase font-instrument-sans font-semibold"
+              >
+                <img src="./assets/icons/about-point.svg" alt="about-point" />
+                <h5 class="text-xl md:text-2xl">
+                  Expertise in Diverse Design Styles
+                </h5>
+              </div>
+            </div>
+            <!-- List item -->
+            <div
+              class="p-4 lg:p-6 border border-white rounded-2xl bg-transparent fade-left backdrop-blur"
+            >
+              <div
+                class="flex gap-2 lg:gap-4 uppercase font-instrument-sans font-semibold"
+              >
+                <img src="./assets/icons/about-point.svg" alt="about-point" />
+                <h5 class="text-xl md:text-2xl">Client-Centric Approach</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button
+            class="bg-grey-dark hover:bg-white hover:text-grey-dark fade-left"
+          >
+            More Details &nbsp; &nbsp; &rarr;
+          </button>
+        </aside>
+
+        <!-- Right Side: A section displaying client and project statistics with images -->
+        <aside class="relative group overflow-hidden rounded-3xl">
+          <!-- Top-right black box: Displaying Happy Clients count -->
+          <div
+            class="bg-black p-2 lg:p-5 w-fit !absolute top-1 !right-1 z-50 rounded-3xl flex gap-2 lg:gap-5 items-center fade-right"
+          >
+            <!-- Icon for clients -->
+            <img src="./assets/icons/clients.svg" alt="clients" />
+
+            <!-- Client count and label -->
+            <aside>
+              <h3
+                class="text-xl md:text-2xl lg:text-5xl font-instrument-sans font-semibold"
+              >
+                150+
+              </h3>
+              <p class="text-grey">Happy Clients</p>
+            </aside>
+          </div>
+
+          <!-- Background image that scales on hover -->
+          <img
+            src="./assets/about-image.jpg"
+            alt="about-image"
+            class="w-full aspect-square object-cover fade-right group-hover:scale-125 transition-transform rounded-3xl"
+          />
+
+          <!-- Bottom-left black box: Displaying Completed Projects count -->
+          <div
+            class="bg-black p-2 lg:p-5 w-fit !absolute bottom-1 left-1 z-50 rounded-3xl flex gap-2 lg:gap-5 items-center fade-right"
+          >
+            <!-- Icon for projects -->
+            <img src="./assets/icons/projects.svg" alt="clients" />
+
+            <!-- Project count and label -->
+            <aside>
+              <h3
+                class="text-xl md:text-2xl lg:text-5xl font-instrument-sans font-semibold"
+              >
+                300+
+              </h3>
+              <p class="text-grey">Completed Projects</p>
+            </aside>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-14 lg:py-20 container">
+        <!-- Services Heading -->
+        <h2
+          class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans"
+        >
+          <span class="heading-letter">S</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter">v</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">c</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">s</span>
+        </h2>
+
+        <!-- Services Subheading -->
+        <h3
+          class="text-xl md:text-2xl lg:text-5xl font-bold lg:mt-4 font-instrument-sans uppercase mt-4"
+        >
+          <span class="heading-letter">W</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter"> </span
+          ><!-- Space -->
+          <span class="heading-letter">p</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">v</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">d</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter"> </span
+          ><!-- Space -->
+          <span class="heading-letter">f</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter"> </span
+          ><!-- Space -->
+          <span class="heading-letter">y</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">u</span
+          ><span class="heading-letter"> </span
+          ><!-- Space -->
+          <span class="heading-letter">i</span
+          ><span class="heading-letter">n</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter"> </span
+          ><!-- Space -->
+          <span class="heading-letter">d</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">s</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">g</span
+          ><span class="heading-letter">n</span>
+        </h3>
+
+        <div class="grid mt-7 lg:mt-14 lg:grid-cols-3 gap-6 lg:h-[90vh]">
+          <!-- Left -->
+          <aside class="flex flex-col gap-6">
+            <!-- Service -->
+            <article
+              class="w-full lg:h-1/2 bg-grey-light text-black rounded-2xl p-4 lg:p-8 hover:scale-110 transition-transform fade-down"
+            >
+              <img src="./assets/services/Mask group-1.png" alt="" />
+
+              <h4
+                class="text-3xl lg:text-4xl font-instrument-sans font-semibold mt-4 mb-4 lg:mb-9"
+              >
+                Residential Interior Design
+              </h4>
+
+              <p class="text-grey-dark text-xl">
+                Tailored designs for homes, apartments, and living spaces to
+                enhance comfort and style.
+              </p>
+            </article>
+            <article
+              class="w-full lg:h-1/2 border-2 border-white bg-black rounded-2xl p-4 lg:p-8 hover:scale-110 transition-transform fade-up"
+            >
+              <img src="./assets/services/Mask group-3.png" alt="" />
+
+              <h4
+                class="text-3xl lg:text-4xl font-instrument-sans font-semibold mt-4 mb-4 lg:/mb-9"
+              >
+                Furniture & Décor Sourcing
+              </h4>
+
+              <p class="text-xl">
+                Curating high-quality furniture, art, and décor to suit your
+                design vision and client needs.
+              </p>
+            </article>
+          </aside>
+
+          <!-- Center -->
+          <aside class="flex flex-col-reverse lg:flex-col gap-6">
+            <!-- Service -->
+            <article
+              class="w-full lg:h-3/5 border-2 border-white bg-black hover:scale-110 transition-transform rounded-2xl p-4 lg:p-8 fade-down"
+            >
+              <img src="./assets/services/Mask group-4.png" alt="" />
+
+              <h4
+                class="text-3xl lg:text-4xl font-instrument-sans font-semibold mt-4 mb-4 lg:mb-9"
+              >
+                Commercial Interior Design
+              </h4>
+
+              <p class="text-xl">
+                Professional design solutions for offices, retail spaces,
+                restaurants, and other businesses. Professional design solutions
+                for offices, retail spaces, restaurants, and other businesses.
+              </p>
+            </article>
+            <article
+              class="w-full lg:h-2/5 border-2 border-white bg-grey-light text-black rounded-2xl p-4 lg:p-8 hover:scale-110 transition-transform fade-up"
+            >
+              <img src="./assets/services/Mask group-2.png" alt="" />
+
+              <h4
+                class="text-3xl lg:text-4xl font-instrument-sans font-semibold mt-4 mb-4 lg:mb-9"
+              >
+                Renovation & Remodeling
+              </h4>
+
+              <p class="text-xl">
+                Comprehensive design services for renovation projects, including
+                kitchen, bathroom, and full-home remodels.
+              </p>
+            </article>
+          </aside>
+
+          <!-- Right -->
+
+          <aside class="flex flex-col gap-6">
+            <!-- Service -->
+            <article
+              class="w-full lg:h-1/2 bg-grey-light text-black rounded-2xl p-4 lg:p-8 hover:scale-110 transition-transform fade-down"
+            >
+              <img src="./assets/services/Mask group.png" alt="" />
+
+              <h4
+                class="text-3xl lg:text-4xl font-instrument-sans font-semibold mb-4 mt-4 lg:mb-9"
+              >
+                Space Planning Design
+              </h4>
+
+              <p class="text-grey-dark text-xl">
+                Optimizing room layouts to improve flow, functionality, and
+                aesthetics.
+              </p>
+            </article>
+            <article
+              class="w-full lg:h-1/2 border-2 border-white bg-black rounded-2xl p-4 lg:p-8 hover:scale-110 transition-transform fade-up"
+            >
+              <img src="./assets/services/Mask group-5.png" alt="" />
+
+              <h4
+                class="text-3xl lg:text-4xl font-instrument-sans font-semibold mt-4 mb-4 lg:mb-9"
+              >
+                3D Visualization & Concept Development
+              </h4>
+
+              <p class="text-xl">
+                Creating realistic 3D renderings to help clients visualize their
+                future space before construction
+              </p>
+            </article>
+          </aside>
+        </div>
+
+        <div class="flex mt-8 justify-center fade-left">
+          <button
+            class="bg-grey-dark hover:bg-white hover:text-black gap-4 flex items-center"
+          >
+            View All Services &nbsp; &rarr;
+          </button>
+        </div>
+      </section>
+
+      <section class="py-14 lg:py-28 container">
+        <!-- Services Heading -->
+        <h2
+          class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans text-center"
+        >
+          <span class="heading-letter">F</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">a</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">u</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">d</span>
+          <span class="heading-letter"> </span>
+          <span class="heading-letter">P</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">j</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">c</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">s</span>
+        </h2>
+
+        <!-- Services Subheading -->
+        <h3
+          class="text-xl md:text-2xl lg:text-5xl font-bold lg:mt-4 font-instrument-sans uppercase text-center mt-2"
+        >
+          <span class="heading-letter">L</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">’</span
+          ><span class="heading-letter">s</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">h</span
+          ><span class="heading-letter">a</span
+          ><span class="heading-letter">v</span
+          ><span class="heading-letter">e</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">a</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">l</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">k</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">o</span
+          ><span class="heading-letter">u</span
+          ><span class="heading-letter">r</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">H</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">g</span
+          ><span class="heading-letter">h</span
+          ><span class="heading-letter">l</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">g</span
+          ><span class="heading-letter">h</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">n</span
+          ><span class="heading-letter">g</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">B</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">s</span
+          ><span class="heading-letter">t</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">D</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">s</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">g</span
+          ><span class="heading-letter">n</span
+          ><span class="heading-letter">s</span>
+        </h3>
+
+        <div
+          class="bg-grey p-3 lg:p-7 rounded-3xl mt-5 lg:mt-10 flex gap-4 lg:gap-7 flex-col lg:flex-row lg:h-screen"
+        >
+          <aside class="w-full lg:w-7/12 flex flex-col gap-7">
+            <article
+              class="relative rounded-2xl overflow-hidden group fade-left"
+            >
+              <div
+                class="absolute left-0 top-0 w-full h-full bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent via-transparent flex justify-between p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="flex items-end w-full">
+                  <div
+                    class="flex lg:items-center w-full justify-between flex-col lg:flex-row"
+                  >
+                    <h3
+                      class="text-lg lg:text-4xl font-instrument-sans font-semibold"
+                    >
+                      Luxury Modern Apartment
+                    </h3>
+
+                    <div
+                      class="bg-white p-1 flex rounded-full text-sm lg:items-center text-black gap-2 flex-row w-fit"
+                    >
+                      <i class="fas fa-search-location"></i>
+                      <p>Downtown, NYC</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="./assets/projects/luxury-modern-apartment.jpeg"
+                alt="luxury-modern-apartment"
+              />
+            </article>
+
+            <article
+              class="relative rounded-2xl overflow-hidden group fade-left"
+            >
+              <div
+                class="absolute left-0 top-0 w-full h-full bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent via-transparent flex justify-between p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="flex items-end w-full">
+                  <div
+                    class="flex lg:items-center w-full justify-between flex-col lg:flex-row"
+                  >
+                    <h3
+                      class="text-lg lg:text-4xl font-instrument-sans font-semibold"
+                    >
+                      Elegant Office Space
+                    </h3>
+
+                    <div
+                      class="bg-white p-1 flex rounded-full text-sm lg:items-center text-black gap-2 w-fit"
+                    >
+                      <i class="fas fa-search-location"></i>
+                      <p>Silicon Valley, CA</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="./assets/projects/elegant-office-spaces.jpeg"
+                alt="elegant-office-spaces"
+              />
+            </article>
+          </aside>
+          <aside class="w-full lg:w-5/12">
+            <article
+              class="relative rounded-2xl overflow-hidden h-full group fade-right"
+            >
+              <div
+                class="absolute left-0 top-0 w-full h-full bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-transparent via-transparent flex justify-between p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <div class="flex items-end w-full">
+                  <div class="flex w-full justify-between flex-col">
+                    <h3
+                      class="text-lg lg:text-4xl font-instrument-sans font-semibold"
+                    >
+                      Chic Café & Restaurant
+                    </h3>
+
+                    <div
+                      class="bg-white p-1 flex rounded-full text-sm items-center text-black gap-2 w-fit"
+                    >
+                      <i class="fas fa-search-location"></i>
+                      <p>Paris, France</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="./assets/projects/chic-cafe.jpeg"
+                alt="chic-cafe"
+                class="h-full object-cover object-[10%]"
+              />
+            </article>
+          </aside>
+        </div>
+
+        <div class="flex mt-8 justify-center fade-left">
+          <button
+            class="bg-grey-dark hover:bg-white hover:text-black gap-4 flex items-center"
+          >
+            Explore All &nbsp; &rarr;
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- </div> -->
+
+    <script
+      src="https://kit.fontawesome.com/b50fc748ca.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

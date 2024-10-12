@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#000000] text-white font-instrument-sans;
+}
+
+::-webkit-scrollbar {
+  @apply w-0;
+}
+
+.fade-left,
+.fade-right,
+.fade-up {
+  @apply relative;
+}
+
+.fade-left {
+  @apply left-[-100px] opacity-0;
+}
+
+.fade-right {
+  @apply right-[-100px] opacity-0;
+}
+
+.fade-up {
+  @apply bottom-[-100px] opacity-0;
+}
+
+button {
+  @apply whitespace-nowrap px-6 py-3 font-medium transition lg:px-8 lg:py-4 rounded;
+}
+
+.heading-letter {
+  @apply relative top-[100px] opacity-0;
+}
+
+/* Basic stroke */
+/* Text stroke for dark backgrounds */
+.text-stroke {
+  color: black;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
