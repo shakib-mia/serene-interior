@@ -6,7 +6,7 @@ const marquee = document.getElementById("marquee");
 // document.addEventListener("DOMContentLoaded", () => {
 const startValue = window.innerWidth < 768 ? "top 90%" : "top 95%";
 const endValue = window.innerWidth < 768 ? "top 20%" : "top 2%";
-console.log(marquee.clientWidth);
+// console.log(marquee.clientWidth);
 
 gsap.fromTo(
   marquee,

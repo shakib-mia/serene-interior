@@ -7,6 +7,11 @@ body {
   @apply bg-[#000000] text-white font-instrument-sans;
 }
 
+body {
+  background-image: url("./assets/Group_1597881061.png");
+  @apply bg-cover bg-repeat-y static;
+}
+
 ::-webkit-scrollbar {
   @apply w-0;
 }

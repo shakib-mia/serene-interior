@@ -5,8 +5,8 @@ import Lenis from "lenis";
 // Initialize Lenis
 const lenis = new Lenis({
   smooth: true, // Enable smooth scrolling
-  duration: 1.2, // The duration of the scroll animation (default: 1)
-  easing: (t) => 1 - Math.pow(1 - t, 3), // Custom easing function (cubic easing)
+  duration: 1.5, // The duration of the scroll animation (default: 1)
+  // easing: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2), // Smoother easing function
   orientation: "vertical", // Set scrolling orientation ('vertical' or 'horizontal')
   gestureOrientation: "vertical", // Define gesture scroll direction
   wheelMultiplier: 2, // Sensitivity of the scroll for mouse wheel or touchpad (default: 1)
@@ -96,3 +96,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+//
