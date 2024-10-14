@@ -1,4 +1,5 @@
 import "./animations";
+// import "./accordion";
 
 import Lenis from "lenis";
 // Initialize Lenis

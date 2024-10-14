@@ -44,3 +44,19 @@ button {
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
 }
+
+.accordion-content {
+  @apply h-0;
+}
+
+.accordion-item input:checked + .accordion-header {
+  @apply bg-grey bg-opacity-50 text-white;
+}
+
+.accordion-item input:checked + .accordion-header svg {
+  @apply rotate-180;
+}
+
+.accordion-item input:checked ~ .accordion-content {
+  @apply bg-grey bg-opacity-50 p-4 text-white h-auto rounded-b-2xl;
+}
