@@ -16,6 +16,15 @@ body {
   @apply w-0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  @apply !leading-[125%];
+}
+
 .fade-left,
 .fade-right,
 .fade-up {
@@ -65,3 +74,28 @@ button {
 .accordion-item input:checked ~ .accordion-content {
   @apply bg-grey bg-opacity-50 p-4 text-white h-auto rounded-b-2xl;
 }
+
+/* .loader { */
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 120px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(farthest-side, #fff 90%, #0000);
+  background: var(--_g) 0 50%, var(--_g) 50% 50%, var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: 25% 50%;
+  animation: l12 1s infinite linear;
+}
+@keyframes l12 {
+  33% {
+    background-position: 0 0, 50% 100%, 50% 100%, 100% 0;
+  }
+  66% {
+    background-position: 50% 0, 0 100%, 100% 100%, 50% 0;
+  }
+  100% {
+    background-position: 50% 50%, 0 50%, 100% 50%, 50% 50%;
+  }
+}
+/* } */

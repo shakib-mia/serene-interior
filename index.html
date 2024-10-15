@@ -21,7 +21,7 @@
     </script>
   </head>
   <body>
-    <!-- <div class="w-screen overflow-x-hidden"> -->
+    <!-- <div id="main-content"> -->
     <!-- Navbar Container -->
     <div
       class="z-[999999999999999999999] w-screen transition fixed backdrop-blur"
@@ -1595,7 +1595,7 @@
             </aside>
 
             <aside
-              class="w-full lg:w-5/12 bg-cover p-3 text-black rounded-2xl bg-no-repeat flex flex-col justify-center items-center gap-3 lg:gap-5"
+              class="w-full lg:w-5/12 bg-cover p-3 text-black rounded-2xl bg-no-repeat flex flex-col justify-center items-center gap-3 aspect-square lg:gap-5"
               style="background-image: url(./assets/faq.jpg)"
             >
               <h4
@@ -1900,6 +1900,398 @@
           </div>
         </div>
       </section>
+
+      <!-- Testimonials Section -->
+      <section
+        class="py-14 lg:py-20 bg-contain bg-left bg-no-repeat"
+        style="background-image: url(./assets/testimonial-bg.svg)"
+      >
+        <!-- Testimonial Heading -->
+        <h2
+          class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans text-center"
+        >
+          <span class="heading-letter">T</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">s</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">m</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">n</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">a</span
+          ><span class="heading-letter">l</span>
+        </h2>
+
+        <!-- Latest Insights on Interior Design Trends Subheading -->
+        <h3
+          class="text-xl md:text-2xl lg:text-4xl font-bold lg:mt-4 font-instrument-sans uppercase mt-2 text-center"
+        >
+          <span class="heading-letter">L</span
+          ><span class="heading-letter">a</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">s</span
+          ><span class="heading-letter">t</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">I</span
+          ><span class="heading-letter">n</span
+          ><span class="heading-letter">s</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">g</span
+          ><span class="heading-letter">h</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">s</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">o</span
+          ><span class="heading-letter">n</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">I</span
+          ><span class="heading-letter">n</span
+          ><span class="heading-letter">t</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">o</span
+          ><span class="heading-letter">r</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">D</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">s</span
+          ><span class="heading-letter">i</span
+          ><span class="heading-letter">g</span
+          ><span class="heading-letter">n</span>
+
+          <span class="heading-letter"> </span>
+
+          <span class="heading-letter">T</span
+          ><span class="heading-letter">r</span
+          ><span class="heading-letter">e</span
+          ><span class="heading-letter">n</span
+          ><span class="heading-letter">d</span
+          ><span class="heading-letter">s</span>
+        </h3>
+
+        <div class="container mt-7 lg:mt-14">
+          <div class="relative h-full">
+            <!-- Slider -->
+            <div
+              class="w-full lg:w-7/12 my-auto bg-black p-4 lg:p-14 lg:absolute z-10 top-0 bottom-0 h-fit bg-center bg-cover bg-no-repeat rounded-lg lg:rounded-2xl fade-left"
+              style="background-image: url(./assets/testimonial-slider-bg.svg)"
+            >
+              <!-- Slider Icon -->
+              <div class="relative w-full h-full">
+                <img
+                  src="./assets/quote.svg"
+                  alt="quote"
+                  class="absolute right-7 top-8 hidden lg:block"
+                />
+
+                <div
+                  class="absolute bottom-4 right-14 hidden lg:flex gap-4 z-[99]"
+                >
+                  <div
+                    class="bg-grey-dark w-10 flex justify-center items-center cursor-pointer hover:bg-white rounded-full aspect-square hover:text-black transition"
+                    id="prev"
+                  >
+                    <i class="fas fa-arrow-left"></i>
+                  </div>
+                  <div
+                    class="bg-grey-dark w-10 flex justify-center items-center cursor-pointer hover:bg-white rounded-full aspect-square hover:text-black transition"
+                    id="next"
+                  >
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                </div>
+
+                <!-- Main Slider -->
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <!-- Slider Item -->
+                    <div class="swiper-slide">
+                      <!-- Testimonial content -->
+                      <p class="text-base lg:text-2xl lg:w-5/6">
+                        Working with Serene Interior was a dream! They perfectly
+                        captured our style and brought our vision to life.
+                        Highly recommended to Anybody For there dream home
+                        interior.
+                      </p>
+
+                      <div
+                        class="mt-7 md:mt-14 lg:mt-28 flex gap-2 lg:gap-5 items-center"
+                      >
+                        <!-- Image -->
+                        <img
+                          src="./assets/testimonial-woman.jpg"
+                          class="w-20 h-20 object-cover rounded-full"
+                          alt="testimonial"
+                        />
+
+                        <div class="flex flex-col">
+                          <!-- Name -->
+                          <p class="text-xl font-semibold">Sarah P.</p>
+                          <!-- Designation -->
+                          <p class="text-lg text-grey-light">
+                            Residential Client
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slider Item -->
+                    <div class="swiper-slide">
+                      <!-- Testimonial content -->
+                      <p class="text-base lg:text-2xl lg:w-5/6">
+                        Working with Serene Interior was a dream! They perfectly
+                        captured our style and brought our vision to life.
+                        Highly recommended to Anybody For there dream home
+                        interior.
+                      </p>
+
+                      <div
+                        class="mt-7 md:mt-14 lg:mt-28 flex gap-2 lg:gap-5 items-center"
+                      >
+                        <!-- Image -->
+                        <img
+                          src="./assets/testimonial-woman.jpg"
+                          class="w-20 h-20 object-cover rounded-full"
+                          alt="testimonial"
+                        />
+
+                        <div class="flex flex-col">
+                          <!-- Name -->
+                          <p class="text-xl font-semibold">Sarah P.</p>
+                          <!-- Designation -->
+                          <p class="text-lg text-grey-light">
+                            Residential Client
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slider Item -->
+                    <div class="swiper-slide">
+                      <!-- Testimonial content -->
+                      <p class="text-base lg:text-2xl lg:w-5/6">
+                        Working with Serene Interior was a dream! They perfectly
+                        captured our style and brought our vision to life.
+                        Highly recommended to Anybody For there dream home
+                        interior.
+                      </p>
+
+                      <div
+                        class="mt-7 md:mt-14 lg:mt-28 flex gap-2 lg:gap-5 items-center"
+                      >
+                        <!-- Image -->
+                        <img
+                          src="./assets/testimonial-woman.jpg"
+                          class="w-20 h-20 object-cover rounded-full"
+                          alt="testimonial"
+                        />
+
+                        <div class="flex flex-col">
+                          <!-- Name -->
+                          <p class="text-xl font-semibold">Sarah P.</p>
+                          <!-- Designation -->
+                          <p class="text-lg text-grey-light">
+                            Residential Client
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              src="./assets/testimonial.jpg"
+              alt="testimonial"
+              class="w-full lg:w-7/12 ml-auto mt-8 lg:mt-0 rounded-lg lg:rounded-2xl fade-right"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="py-14 lg:py-24 bg-cover bg-no-repeat"
+        style="background-image: url(./assets/contact-bg.svg)"
+      >
+        <div class="container">
+          <div class="lg:w-1/2 mx-auto flex flex-col items-center">
+            <h5
+              class="text-2xl lg:text-5xl text-center font-instrument-sans font-medium uppercase"
+            >
+              Start Your Project Today with us
+            </h5>
+            <!-- Section Button -->
+            <div class="flex mt-4 lg:mt-8 justify-center fade-left">
+              <button
+                class="bg-grey-dark hover:bg-white hover:text-black gap-4 flex items-center"
+              >
+                Let's Talk! &nbsp; &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-grey-dark pt-14 pb-5 lg:pb-11 lg:pt-28">
+        <div class="container mb-4 lg:mb-12">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16"
+          >
+            <aside>
+              <a href="#">
+                <h4
+                  class="font-montserrat text-3xl lg:text-4xl font-semibold text-primary"
+                >
+                  Serene Interior
+                </h4>
+              </a>
+
+              <p class="text-lg text-grey capitalize mt-2 md:mt-4 lg:mt-6">
+                our team blends creativity with practicality to transform
+                interiors into personalized, inspiring environments. Whether
+                it’s residential, commercial, or a bespoke project,
+              </p>
+            </aside>
+
+            <aside class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
+              <aside>
+                <h5 class="text-xl md:text-2xl mb-6">Quick Links</h5>
+
+                <ul class="flex flex-col gap-4 text-grey text-lg">
+                  <li>
+                    <a class="hover:text-white transition" href="#"> Home</a>
+                  </li>
+                  <li>
+                    <a class="hover:text-white transition" href="#">
+                      Services</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white transition" href="#">
+                      Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white transition" href="#">
+                      About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a class="hover:text-white transition" href="#"> Blog</a>
+                  </li>
+                </ul>
+              </aside>
+
+              <aside>
+                <h5 class="text-xl md:text-2xl mb-6">Contact</h5>
+
+                <div class="flex gap-2 items-center">
+                  <i class="fas fa-phone-alt"></i>
+                  +987 654 321
+                </div>
+
+                <div class="flex gap-2 items-center mt-2">
+                  <i class="fas fa-phone-alt"></i>
+                  +123 456 789
+                </div>
+
+                <div class="flex gap-2 items-center my-4 lg:my-6">
+                  <i class="far fa-envelope"></i>
+                  <a href="mailto:support@raddito.com">support@raddito.com</a>
+                </div>
+
+                <div class="flex gap-2 items-center my-4 lg:my-6">
+                  <i class="fas fa-location-arrow"></i>
+                  Saint Paul, MN 55112-6629 USA
+                </div>
+              </aside>
+            </aside>
+
+            <aside>
+              <h5 class="text-xl md:text-2xl mb-3 lg:mb-6">Subscribe</h5>
+
+              <p class="text-lg text-grey capitalize">
+                Subscribe to our newsletter fo get update regular
+              </p>
+
+              <div class="flex my-3 lg:my-6">
+                <input
+                  type="text"
+                  class="border border-white rounded-2xl p-5 bg-transparent w-full rounded-r-none"
+                  placeholder="Enter Email Address"
+                />
+                <button
+                  class="bg-white rounded-r-2xl rounded-l-none text-black"
+                >
+                  <i class="fas fa-location-arrow"></i>
+                </button>
+              </div>
+
+              <div class="flex gap-6 text-2xl text-grey-light">
+                <a
+                  href="https://www.instagram.com/radditollc"
+                  class="hover:text-white transition"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/RadditoLLC"
+                  class="hover:text-white transition"
+                >
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a
+                  href="https://twitter.com/RadditoLLC"
+                  class="hover:text-white transition"
+                >
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a
+                  href="https://wa.me/message/BQGVQZMIEILZM1"
+                  class="hover:text-white transition"
+                >
+                  <i class="fa fa-whatsapp"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/radditollc/"
+                  class="hover:text-white transition"
+                >
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <hr />
+
+        <div
+          class="mt-4 lg:mt-12 flex justify-between text-grey-light container flex-col lg:flex-row text-center lg:text-left"
+        >
+          <p>
+            Copyright © 2024 Designed & Developed by
+            <a href="https://raddito.net/" class="underline hover:no-underline"
+              >Raddito LLC</a
+            >.
+          </p>
+
+          <div class="flex gap-6 justify-center lg:justify-start">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- </div> -->
 

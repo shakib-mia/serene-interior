@@ -1,3 +1,8 @@
+// import Swiper JS
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+// import Swiper styles
+import "swiper/css";
 import "./animations";
 // import "./accordion";
 
@@ -6,7 +11,8 @@ import Lenis from "lenis";
 const lenis = new Lenis({
   smooth: true, // Enable smooth scrolling
   duration: 1.5, // The duration of the scroll animation (default: 1)
-  // easing: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2), // Smoother easing function
+  // easing: "linear",
+  // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing for smooth scroll
   orientation: "vertical", // Set scrolling orientation ('vertical' or 'horizontal')
   gestureOrientation: "vertical", // Define gesture scroll direction
   wheelMultiplier: 2, // Sensitivity of the scroll for mouse wheel or touchpad (default: 1)
