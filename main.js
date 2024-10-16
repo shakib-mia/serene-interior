@@ -1,6 +1,6 @@
 // import Swiper JS
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 // import Swiper styles
 import "swiper/css";
 import "./animations";
@@ -102,3 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //
+
+var swiper = new Swiper(".swiper", {
+  loop: true,
+  modules: [Navigation, Autoplay],
+  autoplay: {
+    delay: 5000,
+  },
+  navigation: {
+    nextEl: "#swiper-next",
+    prevEl: "#swiper-prev",
+  },
+});
