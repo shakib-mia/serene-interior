@@ -7,23 +7,21 @@ import "./animations";
 // import "./accordion";
 
 import Lenis from "lenis";
+import { ScrollTrigger } from "gsap/all";
 // Initialize Lenis
-const lenis = new Lenis({
+const option = {
   smooth: true, // Enable smooth scrolling
   duration: 1.5, // The duration of the scroll animation (default: 1)
-  // easing: "linear",
-  // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing for smooth scroll
+  // easing: (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2), // Smoother easing function
   orientation: "vertical", // Set scrolling orientation ('vertical' or 'horizontal')
   gestureOrientation: "vertical", // Define gesture scroll direction
   wheelMultiplier: 2, // Sensitivity of the scroll for mouse wheel or touchpad (default: 1)
   touchMultiplier: 2, // Sensitivity of the scroll for touch devices (default: 2)
   smoothTouch: true, // Enable smooth scrolling on touch devices
-});
+};
+const lenis = new Lenis({});
 
-// Listen for the scroll event and log the event data
-lenis.on("scroll", (e) => {
-  // console.log(e);
-});
+// lenis.on("scroll", ScrollTrigger.update);
 
 // Use requestAnimationFrame to continuously update the scroll
 function raf(time) {
