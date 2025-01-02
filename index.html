@@ -7,26 +7,26 @@
     <title>Serene Interior</title>
     <link rel="stylesheet" href="./style.css" />
     <script>
-      // function toggleStyle(checkbox) {
-      //   const parent = checkbox.closest(".accordion-item fade-left");
-      //   console.log(checkbox);
-      //   if (checkbox.checked) {
-      //     // parent.classList.add("border-t-0");
-      //     parent.style.borderWidth = "0";
-      //   } else {
-      //     // parent.classList.remove("border-t-0");
-      //     parent.style.borderWidth = "1px";
-      //   }
-      // }
+      function openModal(imageSrc) {
+        const modal = document.getElementById("popup-modal");
+        const modalImage = document.getElementById("popup-image");
+        modalImage.src = imageSrc;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
     </script>
   </head>
   <body>
     <!-- <div id="main-content"> -->
-    <!-- Navbar Container -->
-    <div
-      class="z-[999999999999999999999] w-screen transition fixed backdrop-blur"
-      id="navbar"
+    <!-- <div
+      class="w-screen h-screen fixed flex justify-center items-center top-0 backdrop-blur z-[99999999999999999999999]"
+      id="loading"
     >
+      <i class="fa fa-spinner text-7xl animate-[spin_2s_linear_infinite]"></i>
+    </div> -->
+    <!-- Navbar Container -->
+
+    <div class="z-[9999] w-screen transition fixed backdrop-blur" id="navbar">
       <!-- Navigation Bar -->
       <nav class="relative w-screen">
         <div class="container flex items-center justify-between py-4 lg:py-5">
@@ -193,32 +193,38 @@
           class="bg-grey p-4 lg:p-6 rounded-2xl lg:rounded-3x overflow-hidden"
         >
           <div class="flex flex-col lg:flex-row lg:gap-7 gap-4 lg:mb-7 mb-4">
-            <!-- Category -->
+            <!-- Category 1 -->
             <div
-              class="rounded-2xl w-full lg:w-7/12 overflow-hidden relative group fade-left"
+              class="relative w-full lg:w-7/12"
+              onclick="openModal('./assets/categories/category-1.jpg')"
             >
               <div
-                class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
+                class="rounded-2xl overflow-hidden relative group fade-left cursor-pointer"
               >
-                <h3 class="text-base lg:text-3xl">
-                  Lorem ipsum dolor sit amet.
-                </h3>
                 <div
-                  class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
+                  class="absolute bg-black bg-opacity-40 w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
-                  <i class="fas fa-arrow-up rotate-45"></i>
+                  <h3 class="text-base lg:text-3xl text-white">
+                    Lorem ipsum dolor sit amet.
+                  </h3>
+                  <div
+                    class="w-8 lg:w-10 aspect-square flex justify-center items-center border border-white rounded-lg"
+                  >
+                    <i class="fas fa-arrow-up rotate-45 text-white"></i>
+                  </div>
                 </div>
+                <img
+                  src="./assets/categories/category-1.jpg"
+                  alt="category-1"
+                  class="object-cover w-full h-full"
+                />
               </div>
-              <img
-                src="./assets/categories/category-1.jpg"
-                alt="category-1"
-                class="object-cover w-full h-full"
-              />
             </div>
 
-            <!-- Category -->
+            <!-- Category 2 -->
             <div
               class="rounded-2xl w-full lg:w-5/12 overflow-hidden relative group fade-right"
+              onclick="openModal('./assets/categories/category-2.jpg')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
@@ -241,9 +247,10 @@
           </div>
 
           <div class="flex flex-col lg:flex-row gap-4 lg:gap-7 lg:h-96">
-            <!-- Category -->
+            <!-- Category 3 -->
             <div
               class="w-full lg:w-1/4 h-full relative group rounded-2xl overflow-hidden fade-left"
+              onclick="openModal('./assets/categories/category-3.jpg')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
@@ -262,9 +269,10 @@
               />
             </div>
 
-            <!-- Category -->
+            <!-- Category 4 -->
             <div
               class="lg:w-1/2 h-full relative group rounded-2xl overflow-hidden fade-up"
+              onclick="openModal('./assets/categories/category-4.jpg')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
@@ -285,9 +293,10 @@
               />
             </div>
 
-            <!-- Category -->
+            <!-- Category 5 -->
             <div
               class="lg:w-1/4 h-full relative group rounded-2xl overflow-hidden fade-right"
+              onclick="openModal('./assets/categories/category-5.jpg')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
@@ -301,10 +310,33 @@
               </div>
               <img
                 src="./assets/categories/category-5.jpg"
-                alt="category-4"
+                alt="category-5"
                 class="h-full object-cover w-full"
               />
             </div>
+          </div>
+        </div>
+
+        <!-- Popup Modal -->
+        <div
+          id="popup-modal"
+          class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 justify-center items-center hidden z-[99999999]"
+        >
+          <div class="bg-white rounded-xl p-6 max-w-lg w-full relative">
+            <!-- Close Button -->
+            <button
+              class="absolute top-4 right-4 text-black bg-gray-200 rounded-full p-2 hover:bg-gray-300"
+              onclick="document.getElementById('popup-modal').classList.add('hidden')"
+            >
+              ✕
+            </button>
+            <!-- Modal Content -->
+            <img
+              id="popup-image"
+              src=""
+              alt="popup"
+              class="object-cover w-full rounded-xl"
+            />
           </div>
         </div>
       </section>
@@ -343,16 +375,15 @@
       </div>
     </div>
 
-    <!-- Flower Scrolling-->
+    <!-- Flower Scrolling
     <div class="relative">
       <div class="sticky top-0 left-0">
         <video
           id="scroll-video"
           class="lg:h-screen w-screen sticky top-0 left-0 object-cover lg:object-contain"
-          src="./assets/videos/flowerkey3.mp4"
+          src="/videos/flowerkey3.mp4"
         ></video>
 
-        <!-- Text aligned inside the video -->
         <div
           class="hidden lg:block absolute z-[99999999999] bottom-40 left-0 p-8 w-full h-full text-white"
         >
@@ -368,12 +399,12 @@
       </div>
 
       <div class="h-0 lg:h-screen"></div>
-    </div>
+    </div> -->
 
     <!-- About Section -->
 
     <section
-      class="pt-0 py-10 md:py-14 lg:py-20 container grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+      class="pt-0 py-10 md:py-14 lg:py-20 container grid grid-cols-1 lg:grid-cols-2 gap-8"
       id="about"
     >
       <!-- Left Side -->
@@ -448,10 +479,30 @@
             <div
               class="flex gap-2 lg:gap-4 uppercase font-instrument-sans font-semibold"
             >
-              <img src="./assets/icons/about-point.svg" alt="about-point" />
-              <h5 class="text-xl md:text-2xl">
-                Expertise in Diverse Design Styles
-              </h5>
+              <label class="flex gap-2 items-start">
+                <img
+                  src="./assets/icons/about-point.svg"
+                  alt="about-point"
+                  class="peer-checked/expertise:rotate-90"
+                />
+                <div>
+                  <input
+                    type="checkbox"
+                    name="about-checkbox"
+                    class="hidden peer/expertise"
+                    id="expertise"
+                  />
+                  <h5 class="text-xl md:text-2xl cursor-pointer">
+                    Expertise in Diverse Design Styles
+                  </h5>
+                  <p class="h-0 peer-checked/expertise:h-full overflow-hidden">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nisi alias inventore ad voluptas voluptatum totam, quam vel
+                    suscipit recusandae molestiae sequi. Corrupti nihil
+                    recusandae voluptas ex illum ducimus perferendis eligendi.
+                  </p>
+                </div>
+              </label>
             </div>
           </div>
           <!-- List item -->
@@ -461,8 +512,30 @@
             <div
               class="flex gap-2 lg:gap-4 uppercase font-instrument-sans font-semibold"
             >
-              <img src="./assets/icons/about-point.svg" alt="about-point" />
-              <h5 class="text-xl md:text-2xl">Client-Centric Approach</h5>
+              <label class="flex gap-2 items-start">
+                <img
+                  src="./assets/icons/about-point.svg"
+                  alt="about-point"
+                  class="peer-checked/approach:rotate-90"
+                />
+                <div>
+                  <input
+                    type="checkbox"
+                    name="about-checkbox"
+                    class="hidden peer/approach"
+                    id="approach"
+                  />
+                  <h5 class="text-xl md:text-2xl cursor-pointer">
+                    Client Centric Approach
+                  </h5>
+                  <p class="h-0 peer-checked/approach:h-full overflow-hidden">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nisi alias inventore ad voluptas voluptatum totam, quam vel
+                    suscipit recusandae molestiae sequi. Corrupti nihil
+                    recusandae voluptas ex illum ducimus perferendis eligendi.
+                  </p>
+                </div>
+              </label>
             </div>
           </div>
         </div>
@@ -479,7 +552,7 @@
       <aside class="relative group overflow-hidden rounded-3xl">
         <!-- Top-right black box: Displaying Happy Clients count -->
         <div
-          class="bg-black p-2 lg:p-5 w-fit !absolute top-1 !right-1 z-50 rounded-3xl flex gap-2 lg:gap-5 items-center fade-right"
+          class="bg-black p-2 lg:p-5 w-fit !absolute top-1 !right-1 z-50 rounded-3xl flex gap-2 lg:gap-5 items-center zoom-in"
         >
           <!-- Icon for clients -->
           <img src="./assets/icons/clients.svg" alt="clients" />
@@ -499,12 +572,12 @@
         <img
           src="./assets/about-image.jpg"
           alt="about-image"
-          class="w-full aspect-square object-cover fade-right group-hover:lg:scale-125 transition-transform rounded-3xl"
+          class="h-full aspect-square object-cover object-[39%] fade-right group-hover:lg:scale-125 transition-transform rounded-3xl"
         />
 
         <!-- Bottom-left black box: Displaying Completed Projects count -->
         <div
-          class="bg-black p-2 lg:p-5 w-fit !absolute bottom-1 left-1 z-50 rounded-3xl flex gap-2 lg:gap-5 items-center fade-right"
+          class="bg-black p-2 lg:p-5 w-fit !absolute bottom-1 left-1 z-50 rounded-3xl flex gap-2 lg:gap-5 items-center zoom-in"
         >
           <!-- Icon for projects -->
           <img src="./assets/icons/projects.svg" alt="clients" />
@@ -1328,7 +1401,6 @@
               <input
                 type="radio"
                 name="accordion"
-                onchange="toggleStyle(this)"
                 id="section1"
                 class="hidden"
                 checked
@@ -1373,7 +1445,6 @@
               <input
                 type="radio"
                 name="accordion"
-                onchange="toggleStyle(this)"
                 id="section2"
                 class="hidden"
               />
@@ -1416,7 +1487,6 @@
               <input
                 type="radio"
                 name="accordion"
-                onchange="toggleStyle(this)"
                 id="section3"
                 class="hidden"
               />
@@ -1459,7 +1529,6 @@
               <input
                 type="radio"
                 name="accordion"
-                onchange="toggleStyle(this)"
                 id="section4"
                 class="hidden"
               />
@@ -1502,7 +1571,6 @@
               <input
                 type="radio"
                 name="accordion"
-                onchange="toggleStyle(this)"
                 id="section5"
                 class="hidden"
               />
@@ -1545,7 +1613,6 @@
               <input
                 type="radio"
                 name="accordion"
-                onchange="toggleStyle(this)"
                 id="section6"
                 class="hidden"
               />
@@ -1677,206 +1744,239 @@
           ><span class="heading-letter">s</span>
         </h3>
 
-        <ul class="mt-7 lg:mt-14 border-y divide-y divide-white" id="accordion">
-          <li
-            class="py-6 lg:py-12 flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
-          >
-            <aside class="w-full lg:group-hover:scale-90 origin-left">
-              <h4
-                class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
-              >
-                Top 5 Interior Design Trends for 2025
-              </h4>
-
-              <div
-                class="h-0 overflow-hidden group-hover:h-full transition-all"
-              >
-                <p class="text-gray-400 mt-4 block">
-                  Discover the latest trends shaping the world of interior
-                  design and how you can incorporate them into your space for
-                  your dream projects.
-                </p>
-                <button
-                  class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+        <ul
+          class="mt-7 lg:mt-14 border-y border-white flex flex-col py-6 lg:py-12"
+          id="accordion"
+        >
+          <label class="cursor-pointer">
+            <input
+              type="radio"
+              class="accordion-check hidden"
+              name="accordion-check"
+            />
+            <li
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+            >
+              <aside class="w-full origin-left lg:scale-100">
+                <h4
+                  class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
                 >
-                  View Full
-                </button>
-              </div>
-            </aside>
-            <aside class="lg:group-hover:w-2/6 relative">
-              <i
-                class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto group-hover:opacity-0"
-              ></i>
-              <img
-                src="./assets/interior-trends.jpg"
-                alt="interior-trends"
-                class="rounded-2xl w-0 group-hover:w-full transition-all duration-300 ml-auto"
-              />
-              <i
-                class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
-              ></i>
-            </aside>
-          </li>
+                  Top 5 Interior Design Trends for 2025
+                </h4>
 
-          <li
-            class="py-6 lg:py-12 flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
-          >
-            <aside class="w-full lg:group-hover:scale-90 origin-left">
-              <h4
-                class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
-              >
-                Sustainable Interior Design: How to Create Eco-Friendly Spaces.
-              </h4>
+                <div class="h-0 overflow-hidden transition-all">
+                  <p class="text-gray-400 mt-4 block">
+                    Discover the latest trends shaping the world of interior
+                    design and how you can incorporate them into your space for
+                    your dream projects.
+                  </p>
+                  <button
+                    class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+                  >
+                    View Full
+                  </button>
+                </div>
+              </aside>
+              <aside class="relative">
+                <i
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                ></i>
+                <img
+                  src="./assets/interior-trends.jpg"
+                  alt="interior-trends"
+                  class="rounded-2xl w-0 transition-all duration-300 ml-auto"
+                />
+                <i
+                  class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
+                ></i>
+              </aside>
+            </li>
+          </label>
+          <div class="w-full h-px bg-white my-6 lg:my-12 fade-left"></div>
 
-              <div
-                class="h-0 overflow-hidden group-hover:h-full transition-all"
-              >
-                <p class="text-gray-400 mt-4 block">
-                  Discover the latest trends shaping the world of interior
-                  design and how you can incorporate them into your space for
-                  your dream projects.
-                </p>
-                <button
-                  class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+          <label class="cursor-pointer">
+            <input
+              type="radio"
+              class="accordion-check hidden"
+              name="accordion-check"
+            />
+            <li
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+            >
+              <aside class="w-full origin-left lg:scale-100">
+                <h4
+                  class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
                 >
-                  View Full
-                </button>
-              </div>
-            </aside>
-            <aside class="lg:group-hover:w-2/6 relative">
-              <i
-                class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto group-hover:opacity-0"
-              ></i>
-              <img
-                src="./assets/interior-trends.jpg"
-                alt="interior-trends"
-                class="rounded-2xl w-0 group-hover:w-full transition-all duration-300 ml-auto"
-              />
-              <i
-                class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
-              ></i>
-            </aside>
-          </li>
+                  Sustainable Interior Design: How to Create Eco-Friendly
+                  Spaces.
+                </h4>
 
-          <li
-            class="py-6 lg:py-12 flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
-          >
-            <aside class="w-full lg:group-hover:scale-90 origin-left">
-              <h4
-                class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
-              >
-                Maximizing Small Spaces: Creative Interior Design Solutions
-              </h4>
+                <div class="h-0 overflow-hidden transition-all">
+                  <p class="text-gray-400 mt-4 block">
+                    Discover the latest trends shaping the world of interior
+                    design and how you can incorporate them into your space for
+                    your dream projects.
+                  </p>
+                  <button
+                    class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+                  >
+                    View Full
+                  </button>
+                </div>
+              </aside>
+              <aside class="relative">
+                <i
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                ></i>
+                <img
+                  src="./assets/interior-trends.jpg"
+                  alt="interior-trends"
+                  class="rounded-2xl w-0 transition-all duration-300 ml-auto"
+                />
+                <i
+                  class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
+                ></i>
+              </aside>
+            </li>
+          </label>
+          <div class="w-full h-px bg-white my-6 lg:my-12 fade-left"></div>
 
-              <div
-                class="h-0 overflow-hidden group-hover:h-full transition-all"
-              >
-                <p class="text-gray-400 mt-4 block">
-                  Discover the latest trends shaping the world of interior
-                  design and how you can incorporate them into your space for
-                  your dream projects.
-                </p>
-                <button
-                  class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+          <label class="cursor-pointer">
+            <input
+              type="radio"
+              class="accordion-check hidden"
+              name="accordion-check"
+            />
+            <li
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+            >
+              <aside class="w-full origin-left lg:scale-100">
+                <h4
+                  class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
                 >
-                  View Full
-                </button>
-              </div>
-            </aside>
-            <aside class="lg:group-hover:w-2/6 relative">
-              <i
-                class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto group-hover:opacity-0"
-              ></i>
-              <img
-                src="./assets/interior-trends.jpg"
-                alt="interior-trends"
-                class="rounded-2xl w-0 group-hover:w-full transition-all duration-300 ml-auto"
-              />
-              <i
-                class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
-              ></i>
-            </aside>
-          </li>
+                  Maximizing Small Spaces: Creative Interior Design Solutions
+                </h4>
 
-          <li
-            class="py-6 lg:py-12 flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
-          >
-            <aside class="w-full lg:group-hover:scale-90 origin-left">
-              <h4
-                class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
-              >
-                Sustainable Interior Design: How to Create Eco-Friendly Spaces
-              </h4>
+                <div class="h-0 overflow-hidden transition-all">
+                  <p class="text-gray-400 mt-4 block">
+                    Discover the latest trends shaping the world of interior
+                    design and how you can incorporate them into your space for
+                    your dream projects.
+                  </p>
+                  <button
+                    class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+                  >
+                    View Full
+                  </button>
+                </div>
+              </aside>
+              <aside class="relative">
+                <i
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                ></i>
+                <img
+                  src="./assets/interior-trends.jpg"
+                  alt="interior-trends"
+                  class="rounded-2xl w-0 transition-all duration-300 ml-auto"
+                />
+                <i
+                  class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
+                ></i>
+              </aside>
+            </li>
+          </label>
+          <div class="w-full h-px bg-white my-6 lg:my-12 fade-left"></div>
 
-              <div
-                class="h-0 overflow-hidden group-hover:h-full transition-all"
-              >
-                <p class="text-gray-400 mt-4 block">
-                  Discover the latest trends shaping the world of interior
-                  design and how you can incorporate them into your space for
-                  your dream projects.
-                </p>
-                <button
-                  class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+          <label class="cursor-pointer">
+            <input
+              type="radio"
+              class="accordion-check hidden"
+              name="accordion-check"
+            />
+            <li
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+            >
+              <aside class="w-full origin-left lg:scale-100">
+                <h4
+                  class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
                 >
-                  View Full
-                </button>
-              </div>
-            </aside>
-            <aside class="lg:group-hover:w-2/6 relative">
-              <i
-                class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto group-hover:opacity-0"
-              ></i>
-              <img
-                src="./assets/interior-trends.jpg"
-                alt="interior-trends"
-                class="rounded-2xl w-0 group-hover:w-full transition-all duration-300 ml-auto"
-              />
-              <i
-                class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
-              ></i>
-            </aside>
-          </li>
+                  Sustainable Interior Design: How to Create Eco-Friendly Spaces
+                </h4>
 
-          <li
-            class="py-6 lg:py-12 flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
-          >
-            <aside class="w-full lg:group-hover:scale-90 origin-left">
-              <h4
-                class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
-              >
-                The Importance of Lighting in Interior Design
-              </h4>
+                <div class="h-0 overflow-hidden transition-all">
+                  <p class="text-gray-400 mt-4 block">
+                    Discover the latest trends shaping the world of interior
+                    design and how you can incorporate them into your space for
+                    your dream projects.
+                  </p>
+                  <button
+                    class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+                  >
+                    View Full
+                  </button>
+                </div>
+              </aside>
+              <aside class="relative">
+                <i
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                ></i>
+                <img
+                  src="./assets/interior-trends.jpg"
+                  alt="interior-trends"
+                  class="rounded-2xl w-0 transition-all duration-300 ml-auto"
+                />
+                <i
+                  class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
+                ></i>
+              </aside>
+            </li>
+          </label>
+          <div class="w-full h-px bg-white my-6 lg:my-12 fade-left"></div>
 
-              <div
-                class="h-0 overflow-hidden group-hover:h-full transition-all"
-              >
-                <p class="text-gray-400 mt-4 block">
-                  Discover the latest trends shaping the world of interior
-                  design and how you can incorporate them into your space for
-                  your dream projects.
-                </p>
-                <button
-                  class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+          <label class="cursor-pointer">
+            <input
+              type="radio"
+              class="accordion-check hidden"
+              name="accordion-check"
+            />
+            <li
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+            >
+              <aside class="w-full origin-left lg:scale-100">
+                <h4
+                  class="text-xl lg:text-4xl origin-left scale-100 transition-transform duration-1000"
                 >
-                  View Full
-                </button>
-              </div>
-            </aside>
-            <aside class="lg:group-hover:w-2/6 relative">
-              <i
-                class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto group-hover:opacity-0"
-              ></i>
-              <img
-                src="./assets/interior-trends.jpg"
-                alt="interior-trends"
-                class="rounded-2xl w-0 group-hover:w-full transition-all duration-300 ml-auto"
-              />
-              <i
-                class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
-              ></i>
-            </aside>
-          </li>
+                  The Importance of Lighting in Interior Design
+                </h4>
+
+                <div class="h-0 overflow-hidden transition-all">
+                  <p class="text-gray-400 mt-4 block">
+                    Discover the latest trends shaping the world of interior
+                    design and how you can incorporate them into your space for
+                    your dream projects.
+                  </p>
+                  <button
+                    class="border py-1 px-4 mt-6 border-white rounded-full block hover:bg-white hover:text-black transition-colors duration-300"
+                  >
+                    View Full
+                  </button>
+                </div>
+              </aside>
+              <aside class="relative">
+                <i
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                ></i>
+                <img
+                  src="./assets/interior-trends.jpg"
+                  alt="interior-trends"
+                  class="rounded-2xl w-0 transition-all duration-300 ml-auto"
+                />
+                <i
+                  class="fas fa-arrow-down text-xl lg:text-4xl h-0 overflow-hidden transition-all duration-300 absolute right-0 top-0 bottom-0 my-auto"
+                ></i>
+              </aside>
+            </li>
+          </label>
         </ul>
         <div class="flex mt-8 justify-center fade-left">
           <button
@@ -2262,7 +2362,7 @@
         class="mt-4 lg:mt-12 flex justify-between text-grey-light container flex-col lg:flex-row text-center lg:text-left"
       >
         <p>
-          Copyright © 2024 Designed & Developed by
+          Copyright ©<span id="year"></span> Designed & Developed by
           <a href="https://raddito.net/" class="underline hover:no-underline"
             >Raddito LLC</a
           >.

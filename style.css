@@ -99,3 +99,19 @@ button {
   }
 }
 /* } */
+
+#blogs .accordion-check:checked + li aside i:before {
+  @apply opacity-0 transition;
+}
+
+#blogs .accordion-check:checked + li aside {
+  @apply scale-90 transition;
+}
+
+#blogs .accordion-check:checked + li aside div {
+  @apply h-full;
+}
+
+#blogs .accordion-check:checked + li img {
+  @apply w-full;
+}

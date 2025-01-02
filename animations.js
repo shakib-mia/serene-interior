@@ -159,29 +159,6 @@ document.querySelectorAll(".fade-down").forEach((element) => {
   );
 });
 
-const video = document.getElementById("scroll-video");
-
-// Ensure the video metadata is loaded before triggering the ScrollTrigger
-// video.addEventListener("loadedmetadata", () => {
-const videoDuration = video.duration; // Get the total duration of the video
-console.log(videoDuration);
-
-// alert(window.innerWidth);
-
-// Create the ScrollTrigger
-ScrollTrigger.create({
-  trigger: video, // Trigger based on the video element
-  start: `top bottom${window.innerWidth < 600 ? "-=20%" : "+=20%"}%`, // Start when the top of the video reaches the top of the viewport
-  end: `${window.innerWidth < 600 ? "top" : "bottom"} top`, // End the animation when the bottom of the page reaches 300% further down
-  scrub: true, // Smoothly scrub the video playback based on scroll
-  // markers: true,
-  onUpdate: (self) => {
-    // Map the scroll progress to the video’s current time
-    const progress = self.progress;
-    video.currentTime = progress * videoDuration;
-  },
-});
-
 gsap.fromTo(
   document.querySelectorAll(".reveal-up"),
   {
@@ -197,6 +174,39 @@ gsap.fromTo(
     },
   }
 );
+
+gsap.fromTo(
+  document.querySelectorAll(".zoom-in"),
+  {
+    scale: 0,
+  },
+  {
+    scale: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: document.querySelectorAll(".zoom-in"),
+      start: "bottom bottom",
+      // scrub: true,
+    },
+  }
+);
+
+gsap.fromTo(
+  document.querySelectorAll(".zoom-out"),
+  {
+    scale: 1,
+  },
+  {
+    scale: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: document.querySelectorAll(".zoom-in"),
+      start: "bottom bottom",
+      // scrub: true,
+    },
+  }
+);
+
 gsap.fromTo(
   document.querySelector("#video-text"),
   {

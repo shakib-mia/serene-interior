@@ -7,7 +7,7 @@ import "./animations";
 // import "./accordion";
 
 import Lenis from "lenis";
-import { ScrollTrigger } from "gsap/all";
+
 // Initialize Lenis
 const option = {
   smooth: true, // Enable smooth scrolling
@@ -19,7 +19,7 @@ const option = {
   touchMultiplier: 2, // Sensitivity of the scroll for touch devices (default: 2)
   smoothTouch: true, // Enable smooth scrolling on touch devices
 };
-const lenis = new Lenis({});
+const lenis = new Lenis();
 
 // lenis.on("scroll", ScrollTrigger.update);
 
@@ -70,7 +70,6 @@ function createScrollDirectionTracker() {
       navbar.style.position = "fixed";
     } else {
       navbar.style.boxShadow = "none";
-      navbar.style.top = `${document.getElementById("social").clientHeight}px`;
     }
   }
 
@@ -113,4 +112,54 @@ var swiper = new Swiper(".swiper", {
     nextEl: "#swiper-next",
     prevEl: "#swiper-prev",
   },
+});
+
+document.getElementById("year").innerText = new Date().getFullYear();
+
+// Function to preload the video
+async function preloadVideo(url, videoElement) {
+  console.log("Loading video from:", url);
+
+  return fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.blob(); // Get the video as a blob
+    })
+    .then((videoBlob) => {
+      const videoBlobUrl = URL.createObjectURL(videoBlob); // Create a blob URL
+      videoElement.src = videoBlobUrl; // Set the video source
+
+      // Return a promise that resolves when metadata is loaded
+      return new Promise((resolve) => {
+        videoElement.addEventListener("loadedmetadata", () => {
+          if (!isNaN(videoElement.duration)) {
+            console.log("Video is fully loaded.");
+            document.getElementById("loading").style.display = "none"; // Hide loading screen
+
+            console.log("Video duration:", videoElement.duration);
+            resolve();
+          } else {
+            throw new Error("Video metadata could not be loaded.");
+          }
+        });
+      });
+    });
+}
+
+// Main logic
+document.addEventListener("DOMContentLoaded", () => {
+  const videoElement = document.getElementById("scroll-video");
+
+  console.log(videoElement.src);
+
+  preloadVideo(videoElement.src, videoElement)
+    .then((e) => {
+      // document.getElementById("content").style.display = "block"; // Show main content
+    })
+    .catch((err) => {
+      console.error("Error loading video:", err);
+      document.getElementById("loading").innerText = "Failed to load video.";
+    });
 });
