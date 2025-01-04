@@ -7,10 +7,10 @@
     <title>Serene Interior</title>
     <link rel="stylesheet" href="./style.css" />
     <script>
-      function openModal(imageSrc) {
+      function openModal(id) {
         const modal = document.getElementById("popup-modal");
         const modalImage = document.getElementById("popup-image");
-        modalImage.src = imageSrc;
+        modalImage.src = document.getElementById(id).src;
         modal.classList.remove("hidden");
         modal.classList.add("flex");
       }
@@ -196,7 +196,7 @@
             <!-- Category 1 -->
             <div
               class="relative w-full lg:w-7/12"
-              onclick="openModal('./assets/categories/category-1.jpg')"
+              onclick="openModal('category-1')"
             >
               <div
                 class="rounded-2xl overflow-hidden relative group fade-left cursor-pointer"
@@ -205,7 +205,7 @@
                   class="absolute bg-black bg-opacity-40 w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <h3 class="text-base lg:text-3xl text-white">
-                    Commercial Interior Design
+                    Residential Interior Design
                   </h3>
                   <div
                     class="w-8 lg:w-10 aspect-square flex justify-center items-center border border-white rounded-lg"
@@ -216,6 +216,7 @@
                 <img
                   src="./assets/categories/category-1.jpg"
                   alt="category-1"
+                  id="category-1"
                   class="object-cover w-full h-full"
                 />
               </div>
@@ -224,7 +225,7 @@
             <!-- Category 2 -->
             <div
               class="rounded-2xl w-full lg:w-5/12 overflow-hidden relative group fade-right"
-              onclick="openModal('./assets/categories/category-2.jpg')"
+              onclick="openModal('category-2')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
@@ -241,6 +242,7 @@
               <img
                 src="./assets/categories/category-2.jpg"
                 alt="category-2"
+                id="category-2"
                 class="object-cover w-full h-full"
               />
             </div>
@@ -250,12 +252,12 @@
             <!-- Category 3 -->
             <div
               class="w-full lg:w-1/4 h-full relative group rounded-2xl overflow-hidden fade-left"
-              onclick="openModal('./assets/categories/category-3.jpg')"
+              onclick="openModal('category-3')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
               >
-                <h3 class="text-base lg:text-3xl">Commercial</h3>
+                <h3 class="text-base lg:text-3xl">Renovation and Remodeling</h3>
                 <div
                   class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
                 >
@@ -265,6 +267,7 @@
               <img
                 src="./assets/categories/category-3.jpg"
                 alt="category-3"
+                id="category-3"
                 class="h-full object-cover w-full"
               />
             </div>
@@ -272,14 +275,12 @@
             <!-- Category 4 -->
             <div
               class="lg:w-1/2 h-full relative group rounded-2xl overflow-hidden fade-up"
-              onclick="openModal('./assets/categories/category-4.jpg')"
+              onclick="openModal('category-4')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
               >
-                <h3 class="text-base lg:text-3xl">
-                  Commercial Interior Design
-                </h3>
+                <h3 class="text-base lg:text-3xl">Space Planning and Layout</h3>
                 <div
                   class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
                 >
@@ -289,6 +290,7 @@
               <img
                 src="./assets/categories/category-4.jpg"
                 alt="category-4"
+                id="category-4"
                 class="h-full object-cover w-full"
               />
             </div>
@@ -296,12 +298,14 @@
             <!-- Category 5 -->
             <div
               class="lg:w-1/4 h-full relative group rounded-2xl overflow-hidden fade-right"
-              onclick="openModal('./assets/categories/category-5.jpg')"
+              onclick="openModal('category-5')"
             >
               <div
                 class="absolute bg-black bg-opacity-40 cursor-pointer w-full h-full flex justify-between items-end p-3 lg:p-6 opacity-0 group-hover:opacity-100 transition-opacity"
               >
-                <h3 class="text-base lg:text-3xl">Commercial</h3>
+                <h3 class="text-base lg:text-3xl">
+                  Custom Furniture and Decor .
+                </h3>
                 <div
                   class="w-8 lg:w-10 aspect-square flex justify-center items-center border rounded-lg"
                 >
@@ -311,6 +315,7 @@
               <img
                 src="./assets/categories/category-5.jpg"
                 alt="category-5"
+                id="category-5"
                 class="h-full object-cover w-full"
               />
             </div>
@@ -542,7 +547,7 @@
 
         <!-- Button -->
         <button
-          class="bg-grey-dark hover:bg-white hover:text-grey-dark fade-left"
+          class="bg-white hover:bg-grey-dark text-black hover:text-white fade-left"
         >
           More Details &nbsp; &nbsp; &rarr;
         </button>
@@ -778,7 +783,7 @@
 
         <div class="flex mt-8 justify-center fade-left">
           <button
-            class="bg-grey-dark hover:bg-white hover:text-black gap-4 flex items-center"
+            class="bg-white hover:bg-grey-dark text-black hover:text-white gap-4 flex items-center"
           >
             View All Services &nbsp; &rarr;
           </button>
@@ -975,7 +980,7 @@
       <!-- Section Button -->
       <div class="flex mt-8 justify-center fade-left">
         <button
-          class="bg-grey-dark hover:bg-white hover:text-black gap-4 flex items-center"
+          class="bg-white hover:bg-grey-dark text-black hover:text-white gap-4 flex items-center"
         >
           Explore All &nbsp; &rarr;
         </button>
@@ -1980,7 +1985,7 @@
         </ul>
         <div class="flex mt-8 justify-center fade-left">
           <button
-            class="bg-grey-dark hover:bg-white hover:text-black gap-4 flex items-center"
+            class="bg-white hover:bg-grey-dark text-black hover:text-white gap-4 flex items-center"
           >
             View All Blogs &nbsp; &rarr;
           </button>
@@ -2085,13 +2090,13 @@
                 class="absolute bottom-4 right-14 hidden lg:flex gap-4 z-[99]"
               >
                 <button
-                  class="bg-grey-dark w-10 flex justify-center items-center cursor-pointer hover:bg-white rounded-full aspect-square hover:text-black transition"
+                  class="bg-white text-black hover:bg-grey-dark w-10 flex justify-center items-center cursor-pointer rounded-full aspect-square hover:text-white transition"
                   id="swiper-prev"
                 >
                   <i class="fas fa-arrow-left"></i>
                 </button>
                 <button
-                  class="bg-grey-dark w-10 flex justify-center items-center cursor-pointer hover:bg-white rounded-full aspect-square hover:text-black transition"
+                  class="bg-white text-black hover:bg-grey-dark w-10 flex justify-center items-center cursor-pointer rounded-full aspect-square hover:text-white transition"
                   id="swiper-next"
                 >
                   <i class="fas fa-arrow-right"></i>
@@ -2217,7 +2222,7 @@
           <!-- Section Button -->
           <div class="flex mt-4 lg:mt-8 justify-center fade-left">
             <button
-              class="bg-grey-dark hover:bg-white hover:text-black gap-4 flex items-center"
+              class="bg-white hover:bg-grey-dark text-black hover:text-white gap-4 flex items-center"
             >
               Let's Talk! &nbsp; &rarr;
             </button>
