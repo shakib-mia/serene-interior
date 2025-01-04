@@ -110,7 +110,7 @@
       <header class="container pt-20 lg:pt-32 px-4 lg:px-0">
         <!-- Heading with animated letters -->
         <h1
-          class="text-5xl md:text-6xl lg:text-[6.5rem] font-bold flex justify-center lg:justify-between flex-wrap lg:flex-nowrap"
+          class="text-5xl md:text-6xl lg:text-[6.5rem] font-bold flex justify-start lg:justify-between flex-wrap lg:flex-nowrap"
         >
           <!-- "Interiors" word -->
           <div class="flex gap-px">
@@ -175,7 +175,7 @@
 
           <!-- Counter section -->
           <div
-            class="w-24 sm:w-32 md:w-40 aspect-square bg-[size:100%] animate-rotateReverse flex justify-center items-center fade-right"
+            class="w-24 sm:w-32 md:w-40 aspect-square bg-[size:100%] animate-rotateReverse justify-center items-center fade-right hidden lg:flex"
             style="background-image: url(./assets/counter.svg)"
           >
             <p
@@ -376,7 +376,7 @@
     </div>
 
     <!-- Flower Scrolling
-    <div class="relative">
+    <div >
       <div class="sticky top-0 left-0">
         <video
           id="scroll-video"
@@ -404,7 +404,7 @@
     <!-- About Section -->
 
     <section
-      class="pt-0 py-10 md:py-14 lg:py-20 container grid grid-cols-1 lg:grid-cols-2 gap-8"
+      class="py-10 md:py-14 lg:py-20 container grid grid-cols-1 lg:grid-cols-2 gap-8"
       id="about"
     >
       <!-- Left Side -->
@@ -424,7 +424,7 @@
 
         <!-- About Subheading -->
         <h3
-          class="text-xl md:text-2xl lg:text-5xl font-bold lg:mt-4 font-instrument-sans mt-4"
+          class="text-xl md:text-2xl lg:text-5xl font-bold lg:mt-4 font-instrument-sans mt-2"
         >
           <span class="heading-letter">C</span
           ><span class="heading-letter">r</span
@@ -459,7 +459,7 @@
 
         <!-- About Text -->
         <p
-          class="mt-2 lg:mt-6 text-sm lg:text-lg text-grey font-instrument-sans capitalize fade-left"
+          class="mt-4 lg:mt-6 text-sm lg:text-lg text-grey font-instrument-sans capitalize fade-left"
         >
           We are a passionate team of designers dedicated to transforming spaces
           into personalized havens of beauty and functionality. With years of
@@ -789,7 +789,7 @@
     <section class="py-10 md:py-14 lg:py-20 container">
       <!-- Services Heading -->
       <h2
-        class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans text-center"
+        class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans lg:text-center"
       >
         <span class="heading-letter">F</span
         ><span class="heading-letter">e</span
@@ -812,7 +812,7 @@
 
       <!-- Services Subheading -->
       <h3
-        class="text-xl md:text-2xl lg:text-5xl font-bold lg:mt-4 font-instrument-sans uppercase text-center mt-2"
+        class="text-xl md:text-2xl lg:text-5xl font-bold lg:mt-4 font-instrument-sans uppercase lg:text-center mt-2"
       >
         <span class="heading-letter">L</span
         ><span class="heading-letter">e</span
@@ -1326,7 +1326,7 @@
       <div class="container rotate-180">
         <!-- FAQ Heading -->
         <h2
-          class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans text-center"
+          class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans lg:text-center"
         >
           <span class="heading-letter">F</span
           ><span class="heading-letter">A</span
@@ -1335,7 +1335,7 @@
 
         <!-- FAQ Subheading -->
         <h3
-          class="text-xl md:text-2xl lg:text-4xl font-bold lg:mt-4 font-instrument-sans uppercase mt-2 text-center"
+          class="text-xl md:text-2xl lg:text-4xl font-bold lg:mt-4 font-instrument-sans uppercase mt-2 lg:text-center"
         >
           <span class="heading-letter">M</span
           ><span class="heading-letter">o</span
@@ -1679,7 +1679,7 @@
       <div class="container">
         <!-- BLOG Heading -->
         <h2
-          class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans text-center"
+          class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans lg:text-center"
         >
           <span class="heading-letter">B</span
           ><span class="heading-letter">L</span
@@ -1689,7 +1689,7 @@
 
         <!-- BLOG Subheading -->
         <h3
-          class="text-xl md:text-2xl lg:text-4xl font-bold lg:mt-4 font-instrument-sans uppercase mt-2 text-center"
+          class="text-xl md:text-2xl lg:text-4xl font-bold lg:mt-4 font-instrument-sans uppercase mt-2 lg:text-center"
         >
           <span class="heading-letter">L</span
           ><span class="heading-letter">a</span
@@ -1755,7 +1755,7 @@
               name="accordion-check"
             />
             <li
-              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left relative"
             >
               <aside class="w-full origin-left lg:scale-100">
                 <h4
@@ -1777,9 +1777,9 @@
                   </button>
                 </div>
               </aside>
-              <aside class="relative">
+              <aside>
                 <i
-                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto h-fit"
                 ></i>
                 <img
                   src="./assets/interior-trends.jpg"
@@ -1801,7 +1801,7 @@
               name="accordion-check"
             />
             <li
-              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left relative"
             >
               <aside class="w-full origin-left lg:scale-100">
                 <h4
@@ -1824,9 +1824,9 @@
                   </button>
                 </div>
               </aside>
-              <aside class="relative">
+              <aside>
                 <i
-                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto h-fit"
                 ></i>
                 <img
                   src="./assets/interior-trends.jpg"
@@ -1848,7 +1848,7 @@
               name="accordion-check"
             />
             <li
-              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left relative"
             >
               <aside class="w-full origin-left lg:scale-100">
                 <h4
@@ -1870,9 +1870,9 @@
                   </button>
                 </div>
               </aside>
-              <aside class="relative">
+              <aside>
                 <i
-                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto h-fit"
                 ></i>
                 <img
                   src="./assets/interior-trends.jpg"
@@ -1894,7 +1894,7 @@
               name="accordion-check"
             />
             <li
-              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left relative"
             >
               <aside class="w-full origin-left lg:scale-100">
                 <h4
@@ -1916,9 +1916,9 @@
                   </button>
                 </div>
               </aside>
-              <aside class="relative">
+              <aside>
                 <i
-                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto h-fit"
                 ></i>
                 <img
                   src="./assets/interior-trends.jpg"
@@ -1940,7 +1940,7 @@
               name="accordion-check"
             />
             <li
-              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left"
+              class="flex flex-col lg:flex-row justify-between group gap-6 transition-all duration-300 fade-left relative"
             >
               <aside class="w-full origin-left lg:scale-100">
                 <h4
@@ -1962,9 +1962,9 @@
                   </button>
                 </div>
               </aside>
-              <aside class="relative">
+              <aside>
                 <i
-                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto"
+                  class="fas fa-arrow-down absolute top-0 bottom-0 right-0 my-auto h-fit"
                 ></i>
                 <img
                   src="./assets/interior-trends.jpg"
@@ -1995,7 +1995,7 @@
     >
       <!-- Testimonial Heading -->
       <h2
-        class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans text-center"
+        class="text-4xl md:text-6xl lg:text-8xl font-bold text-stroke font-instrument-sans lg:text-center"
       >
         <span class="heading-letter">T</span
         ><span class="heading-letter">e</span
@@ -2012,7 +2012,7 @@
 
       <!-- Latest Insights on Interior Design Trends Subheading -->
       <h3
-        class="text-xl md:text-2xl lg:text-4xl font-bold lg:mt-4 font-instrument-sans uppercase mt-2 text-center"
+        class="text-xl md:text-2xl lg:text-4xl font-bold lg:mt-4 font-instrument-sans uppercase mt-2 lg:text-center"
       >
         <span class="heading-letter">L</span
         ><span class="heading-letter">a</span
